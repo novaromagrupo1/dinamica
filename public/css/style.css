@@ -40,12 +40,11 @@
 .container {
     min-height: calc(100vh - 56px - 100px);
     padding: 50px;
-    
+    padding-top: 50px;
 }
 
 .titulo-form {
     color: var(--botao-salvar-adicionar)
-    padding-top: 50px; 
 }
 
 .footer {
