@@ -23,12 +23,31 @@ function UserController() {
     
     const body = req.body;
 
-    if (body.password != body.confirm_password) {
-      res.render('users/create', {
+    if (!body.password) {
+      res.render("users/create", {
         error: {
-          message: 'Os campos senha e confirmar senha são diferentes.'
-        }
+          message: "O campo senha deve ser preenchido.",
+        },
       });
+      return;
+    }
+
+    if (!body.password_confirmation) {
+      res.render("users/create", {
+        error: {
+          message: "O campo de confirmação de senha deve ser preenchido.",
+        },
+      });
+      return;
+    }
+
+    if (body.password != body.password_confirmation) {
+      res.render("users/create", {
+        error: {
+          message: "Os campos senha e confirmar senha devem ser iguais.",
+        },
+      });
+      return
     }
 
     const hashed_password = await bcrypt.hash(req.body.password, 10);
