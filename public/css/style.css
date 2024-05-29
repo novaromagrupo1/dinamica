@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 :root {
     --cor-header: tomato;
-    --cor-footer: silver;
+    --cor-footer: #2B2C33;
     --botao-salvar-adicionar: #20c997;
+    --fonte-titulo-footer: "Krona One", sans-serif;
+    --fonte-texto-footer: "Roboto", sans-serif;
+    --cor-titulo-footer: white;
+    --cor-texto-footer: rgba(255, 255, 255, 0.596);
 }
 
 * {
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-
-  font-family: 'Roboto', sans-serif;
 }
 
 .header {
@@ -48,9 +51,45 @@
 }
 
 .footer {
-    height: 100px;
+    height: 200px;
     background-color: var(--cor-footer);
     padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container-footer{
+    align-self: center;
+}
+
+.contact {
+    margin-top: 35px;
+}
+.img-footer {
+    max-height: 90%;
+}
+
+.titulo-footer {
+    color: var(--cor-titulo-footer);
+    font-family: var(--fonte-titulo-footer);
+    font-size: 20px;
+}
+
+.texto-footer {
+    color: var(--cor-texto-footer);
+    margin-top: 20px;
+    font-family: var(--fonte-texto-footer);
+}
+
+.icon-footer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icon-footer > a{
+    font-size: 21px;
+    color: var(--cor-titulo-footer);    
 }
 
 .concluido td:not(:last-child) {
