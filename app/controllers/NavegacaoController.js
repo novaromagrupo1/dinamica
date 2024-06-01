@@ -12,6 +12,12 @@ function NavegacaoController() {
         });
     }
 
+    function blog(request, response) {
+        return response.render("blog", {
+            title: "Lista de Postagens"
+        });
+    }
+
     function sobre(request, response) {
         return response.render("sobre", {
             title: "Sobre a empresa"
@@ -27,7 +33,8 @@ function NavegacaoController() {
         usuarios,
         sobre,
         index,
-        notFound
+        notFound,
+        blog
     }
 
 }
