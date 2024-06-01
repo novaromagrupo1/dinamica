@@ -3,7 +3,7 @@ const express = require("express");
 
 const { sequelize, createDatabase } = require('./core/sequelize');
 const Models = require('./models');
-// createDatabase(sequelize);
+createDatabase(sequelize);
 
 const useHelpers = require("./core/helpers");
 const useRouters = require("./core/routers");
