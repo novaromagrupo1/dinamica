@@ -1,0 +1,23 @@
+<%- include("../includes/header"); %>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+
+<div class="container">
+    <h3>Postagens</h3>
+    <hr>
+    <a href="/blog/create" class="btn btn-primary mb-3">Criar Nova Postagem</a>
+    <ul class="list-group">
+        <% posts.forEach(post => { %>
+            <li class="list-group-item">
+                <h5><%= post.title %></h5>
+                <p><%= post.text %></p>
+                <small>Publicado em: <%= moment(post.publish_date).format('DD/MM/YYYY') %></small>
+
+                <form method="POST" action="/blog/remove/<%= post.id %>" class="d-inline">
+                    <button type="submit" class="btn btn-danger btn-sm">Remover</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+</div>
+
+<%- include("../includes/footer"); %>

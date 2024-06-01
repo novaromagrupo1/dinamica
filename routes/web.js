@@ -4,6 +4,7 @@ const router = express.Router();
 const NavegacaoController = require("../app/controllers/NavegacaoController");
 const TasksController = require("../app/controllers/TasksController");
 const UsersController = require("../app/controllers/UsersController");
+const BlogController = require("../app/controllers/BlogController")
 
 // Rotas das Tarefas
 router.get('/tasks', TasksController.list)
@@ -13,6 +14,11 @@ router.post('/tasks/remove/:id', TasksController.remove)
 router.get('/tasks/edit/:id', TasksController.edit)
 router.post('/tasks/update', TasksController.update)
 router.post('/tasks/update-status/:id', TasksController.updateStatus)
+
+router.get('/blog', BlogController.list)
+router.get('/blog/create', BlogController.create)
+router.post('/blog/save', BlogController.save)
+router.post('/blog/remove/:id', BlogController.remove)
 
 router.get('/users', UsersController.list)
 router.get('/users/create', UsersController.create)
@@ -24,7 +30,6 @@ router.post('/users/update-status/:id', UsersController.updateStatus)
 
 router.get('/', NavegacaoController.index);
 router.get('/sobre', NavegacaoController.sobre);
-
 
 
 router.get('*', function notFound(request, response) {
