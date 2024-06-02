@@ -1,4 +1,4 @@
-const Blog = require('../models/blog');
+const Blog = require('../models/Blog');
 const useBlogRepository = require("../repositories/BlogRepository");
 const moment = require('moment');
 
