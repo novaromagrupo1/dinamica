@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
 
 :root {
-    --cor-header: tomato;
     --cor-footer: #2B2C33;
     --botao-salvar-adicionar: #20c997;
     --fonte-titulo-footer: "Krona One", sans-serif;
@@ -19,7 +18,7 @@
 
 .header {
     height: 150px;
-    background-color: var(--cor-header);
+    background-color: var(--botao-salvar-adicionar);
     display: flex;
     justify-content: center;
     align-items: center;
