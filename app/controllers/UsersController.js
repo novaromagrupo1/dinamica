@@ -26,7 +26,7 @@ function UserController() {
     if (!body.password) {
       res.render("users/create", {
         error: {
-          message: "O campo senha deve ser preenchido.",
+          message: "O campo senha deve ser preenchido!",
         },
       });
       return;
@@ -35,7 +35,7 @@ function UserController() {
     if (!body.password_confirmation) {
       res.render("users/create", {
         error: {
-          message: "O campo de confirmação de senha deve ser preenchido.",
+          message: "O campo de confirmação de senha deve ser preenchido!",
         },
       });
       return;
@@ -44,7 +44,7 @@ function UserController() {
     if (body.password != body.password_confirmation) {
       res.render("users/create", {
         error: {
-          message: "Os campos senha e confirmar senha devem ser iguais.",
+          message: "Os campos senha e confirmar senha devem ser iguais!",
         },
       });
       return
