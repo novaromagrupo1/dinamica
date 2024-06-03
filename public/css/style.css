@@ -34,6 +34,8 @@
 .container {
     min-height: calc(100vh - 56px - 100px);
     padding: 50px;
+    text-align: center;
+    padding-top: 50px; 
 }
 
 .footer {
@@ -46,3 +48,17 @@
     text-decoration-line: line-through;
     text-decoration-thickness: 2px;
 }
+
+.logo {
+    display: inline-block;
+    width: 250px;
+    height: 240px;
+    margin: 90px auto 0;
+  }
+  
+  .welcome-message {
+    font-size: 34px;
+    margin: 15px;
+    
+    
+  }
