@@ -1,5 +1,5 @@
-const { date } = require('joi');
-const Blog = require('../models/blog')
+onst { date } = require('joi');
+const Blog = require('../models/Blog')
 
 function useBlogRepository() {
   async function list() {
