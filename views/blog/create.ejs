@@ -1,0 +1,24 @@
+<%- include("../includes/header"); %>
+
+<div class="container">
+    <h3 class="titulo-form">Criar postagem</h3>
+    <hr>
+    <form method="POST" action="/blog/save">
+        <div class="mb-3">
+            <label for="titulo" class="form-label">Título</label>
+            <input type="text" class="form-control" id="titulo" name="title" required>
+        </div>
+        <div class="mb-3">
+            <label for="texto" class="form-label">Texto da Postagem</label>
+            <textarea class="form-control" id="texto" name="text" required></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="data_publicacao" class="form-label">Data de Publicação</label>
+            <input type="date" class="form-control" id="data_publicacao" name="data_publicacao" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <a href="/blog" class="btn btn-secondary">Cancelar</a>
+    </form>
+</div>
+
+<%- include("../includes/footer"); %>
