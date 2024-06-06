@@ -1,31 +1,27 @@
 <%- include("includes/header"); %>
 
 <div class="container">
-
-    <h3 class="titulo-form">Editar Tarefa</h3>
+    <h3 class="titulo-form">Editar Usuário</h3>
     <hr>
 
-    <form method="POST" action="/tasks/update">
-        <!-- <input type="hidden" name="_method" value="PUT"> -->
-        <input type="hidden" name="id" value="<%= task.id %>">
+    <form method="POST" action="/users/update">
+        <input type="hidden" name="id" value="<%= user.id %>">
         <div class="mb-3">
-          <label for="titulo" class="form-label">Título</label>
-          <input type="text" class="form-control" id="titulo" name="title" aria-describedby="emailHelp" value="<%= task.title %>">
+          <label for="name" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="name" name="name" value="<%= user.name %>">
         </div>
         <div class="mb-3">
-          <label for="descricao" class="form-label">Descrição</label>
-          <!-- <input type="text" class="form-control" id="descricao" name="description" value="<%= task.description %>"> -->
-          <textarea class="form-control" id="descricao" name="description"><%= task.description %></textarea>
-
+          <label for="email" class="form-label">E-mail</label>
+          <input type="email" class="form-control" id="email" name="email" value="<%= user.email %>">
         </div>
+        <input type="hidden" name="active" value="0"> <!-- Campo hidden para garantir o valor 0 -->
         <div class="mb-3 form-check">
-          <input type="checkbox" class="form-check-input" id="concluido" name="done" value="1" <%= task.done == 1 ? 'checked' : '' %>>
-          <label class="form-check-label" for="concluido">Concluído </label>
+          <input type="checkbox" class="form-check-input" id="active" name="active" value="1" <%= user.active ? 'checked' : '' %>>
+          <label class="form-check-label" for="active">Ativo</label>
         </div>
         <button type="submit" class="btn btn-primary">Salvar</button>
-        <a href="/tasks" class="btn btn-secondary">Cancelar</a>
+        <a href="/users" class="btn btn-secondary">Cancelar</a>
       </form>
-    
 </div>
 
 <%- include("includes/footer"); %>
